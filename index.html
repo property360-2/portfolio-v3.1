@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jun Alvior | Portfolio</title>
+    <link rel="stylesheet" href="/style/styles.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Jun Alvior</h1>
+            <q class="quote">Full Stack Developer</q>
+        </section>
+
+        <hr>
+
+        <!-- Introduction Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hi, My Name Is Dionisio DR Alvior III. I'm a Full Stack Developer proficient in HTML, CSS, JavaScript,
+                and libraries such as React, Next.js, and Tailwind for the frontend. My backend skills include Node.js,
+                PHP, and SQL databases.</p>
+            <p>I'm currently a student but I've already successfully implemented full stack applications. There’s a lot
+                more for me to learn, but I’m motivated to grow, improve, and become a better, more adaptable developer
+                — mentally, physically, and intellectually.</p>
+            <p>I can also do project management, SEO, accessibility, responsive design, semantics, and other techniques
+                that help businesses and users.</p>
+        </section>
+
+        <hr>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="projects">
+                <div class="project">
+                    <h4>Project Title</h4>
+                    <p>Short Description</p>
+                    <p>Tech Stack: HTML, CSS, JavaScript</p>
+                    <a href="#" target="_blank" rel="nofollow noopener">View Project</a>
+                </div>
+
+                <div class="project">
+                    <h4>Project Title</h4>
+                    <p>Short Description</p>
+                    <p>Tech Stack: React, Node</p>
+                    <a href="#" target="_blank" rel="nofollow noopener">View Project</a>
+                </div>
+
+                <div class="project">
+                    <h4>Project Title</h4>
+                    <p>Short Description</p>
+                    <p>Tech Stack: PHP, MySQL</p>
+                    <a href="#" target="_blank" rel="nofollow noopener">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Quote Section -->
+        <section class="quote">
+            <q>I will struggle, I will fail, but to surrender is not the privilege I have</q>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector("#header");
+            const footer = document.querySelector("#footer");
+
+            if (header) {
+                fetch('/components/header.html')
+                    .then(response => response.text())
+                    .then(data => { header.innerHTML = data })
+                    .catch(err => console.error('Error loading header.html', err));
+            }
+            if (footer) {
+                fetch('/components/footer.html')
+                    .then(response => response.text())
+                    .then(data => { footer.innerHTML = data })
+                    .catch(err => console.error('Error loading footer.html', err));
+            }
+        });
+    </script>
+</body>
+
+</html>
